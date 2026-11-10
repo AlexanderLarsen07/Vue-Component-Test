@@ -1,0 +1,15 @@
+<!-- // solution
+app.component('book-details', {
+  props: {
+    prop1: {
+      type: Array,
+      required: true
+    }
+  },
+  template:
+  /*html*/
+  `
+      
+  `
+})
+// solution -->
