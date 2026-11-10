@@ -15,31 +15,19 @@
 
       <h1>{{ intro }}</h1>
 
-      <h2>Add a new book to the list:</h2>
-      <input v-model="id" placeholder="Enter book name" />
-      <br/>
-      <input v-model="title" placeholder="Enter book title" />
-      <br/>
-      <input v-model="author" placeholder="Enter book author" />
-      <br/>
-      <input v-model="published" placeholder="Enter book published year" />
-      <br/>
-      <button @click="AddBook" >Add Book</button>
+      <add-book @add-book="addBook"></add-book>
+
       <h1>_____________________________</h1>
       <H2>Show all the books</H2>
 
-      <h2>Books List</h2>
-      <div>       
-        <ul>
-          <li v-for="book in books" :key="book.id">
-            {{ book.title }} by {{ book.author }} ({{ book.published }})
-          </li>
-        </ul> 
-      </div>
+      <book-details :booklist="books"></book-details>
+
     </div>
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
+    <script src="./components/AddBook.js"></script>
+    <script src="./components/BookDetails.js"></script>
 
     <!-- Mount App -->
     <script>
